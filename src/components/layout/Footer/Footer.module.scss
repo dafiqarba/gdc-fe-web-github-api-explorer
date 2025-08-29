@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 2.4rem;
+  border-top: 0.1rem solid var(--line);
+  background: var(--surface);
+
+  .inner {
+    max-width: 96rem;
+    margin: 0 auto;
+    padding: 1.6rem;
+    color: var(--text-dim);
+    display: grid;
+    gap: 0.4rem;
+    font-size: 1.4rem;
+
+    .copy {
+      margin: 0;
+    }
+
+    .desc {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

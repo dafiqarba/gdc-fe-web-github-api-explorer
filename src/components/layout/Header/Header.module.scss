@@ -1,0 +1,35 @@
+.header {
+  top: 0;
+  z-index: 20;
+  position: sticky;
+
+  backdrop-filter: saturate(140%) blur(0.6rem);
+  background: linear-gradient(180deg, var(--surface), transparent);
+
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: grid;
+  gap: 1.2rem;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 1rem 1.6rem;
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    width: fit-content;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
