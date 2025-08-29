@@ -19,7 +19,7 @@ export async function getUserRepos(
   username: string,
   signal?: AbortSignal
 ): Promise<Repo[]> {
-  const res = await fetch(`${BASE}/users/${username}/repos?per_page=100&sort=updated`, {
+  const res = await fetch(`${BASE}/users/${username}/repos?per_page=10&sort=updated`, {
     signal,
   })
   if (!res.ok) {
