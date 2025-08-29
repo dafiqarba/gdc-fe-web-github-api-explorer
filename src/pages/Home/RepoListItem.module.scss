@@ -1,0 +1,74 @@
+.repoItem {
+  background: var(--surface);
+  border: 0.1rem solid var(--line);
+  padding: 1.4rem;
+  transition: box-shadow 0.2s ease, transform 0.05s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--brand-400);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0.1rem);
+  }
+
+  .itemHead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 0.8rem;
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      word-break: break-word;
+      width: fit-content;
+      color: var(--brand-700);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .toGithubLink {
+      display: inline-flex;
+      align-items: center;
+      background-color: transparent;
+      justify-content: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 0.8rem;
+      border: 0.1rem solid var(--line);
+      color: var(--text-dim);
+      text-decoration: none;
+
+      & a {
+        color: var(--text-dim);
+
+        &:hover {
+          color: var(--brand-600);
+        }
+      }
+
+      &:hover {
+        border-color: var(--brand-400);
+        background-color: transparent;
+        color: var(--brand-600);
+      }
+    }
+  }
+
+  .repoDesc {
+    font-size: 1.2rem;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+}

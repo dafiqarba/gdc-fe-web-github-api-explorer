@@ -1,0 +1,38 @@
+.searchBar {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+
+  .input {
+    flex: 1;
+    background: var(--surface);
+    border: 0.1rem solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    outline: none;
+    transition: border 0.15s ease;
+
+    &:focus {
+      border-color: var(--brand-400);
+    }
+  }
+
+  .btn {
+    padding: 1.2rem 1.6rem;
+    border: 0.1rem solid var(--brand-500);
+    border-radius: var(--radius);
+    background: var(--brand-500);
+    color: var(--surface);
+    cursor: pointer;
+    transition: transform 0.05s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+      filter: brightness(0.98);
+    }
+
+    &:active {
+      transform: translateY(0.1rem);
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use '../../styles/mixins' as *;
+
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+
+  .content {
+    padding: 1rem 2rem 2rem 14rem;
+    position: relative;
+
+    .avatar {
+      position: absolute;
+      top: -2rem;
+      left: 2rem;
+      width: 9.6rem;
+      height: 9.6rem;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      border: 0.3rem solid var(--surface);
+    }
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.2rem;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+          margin: 0;
+          font-size: 2rem;
+          color: var(--brand-800);
+        }
+
+        .handle {
+          color: var(--text-dim);
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .bio {
+      font-size: 1.6rem;
+      color: var(--text-dim);
+      max-width: 70ch;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 1rem;
+    }
+
+    .socialStats {
+      margin: 1.4rem 0 0 0;
+      display: flex;
+      justify-content: flex-start;
+      gap: clamp(1.2rem, 3vw, 2.4rem);
+
+      & > div {
+        display: grid;
+        text-align: left;
+        gap: 0.2rem;
+      }
+
+      & strong {
+        font-size: 1.8rem;
+        color: var(--text);
+      }
+
+      & span {
+        font-size: 1.3rem;
+        color: var(--text-dim);
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .card {
+    .content {
+      padding: 2rem;
+
+      .avatar {
+        width: 6.4rem;
+        height: 6.4rem;
+        top: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 0.2rem;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        padding: 0;
+
+        .title {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .bio {
+        text-align: center;
+      }
+
+      .socialStats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.6rem;
+
+        & div {
+          gap: 0.1rem;
+        }
+      }
+    }
+  }
+}
