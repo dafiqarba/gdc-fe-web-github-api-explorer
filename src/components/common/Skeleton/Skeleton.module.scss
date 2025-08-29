@@ -1,0 +1,13 @@
+@use '../../../styles' as *; 
+
+.skeleton {
+  display: block;
+  background-color: var(--surface);
+  border: 0.1rem solid var(--line);
+}
+
+.shimmer {
+  @include shimmer(1.15s);
+}
+
+

@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  justify-content: right;
+
+  background: var(--brand-600);
+  border: 0.1rem solid var(--brand-600);
+  border-radius: 99.9rem;
+  padding: 0.8rem 1.2rem;
+  transition: transform 0.05s ease;
+
+  color: var(--brand-200);
+
+  &:hover {
+    background-color: var(--brand-700);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0.1rem);
+  }
+
+  a {
+    white-space: nowrap;
+    color: var(--brand-100);
+    font-weight: 500;
+
+    text-decoration: none;
+  }
+}
