@@ -19,7 +19,6 @@ export async function getUserRepos(
   username: string,
   signal?: AbortSignal
 ): Promise<Repo[]> {
-  // sort repos by stargazers desc and take top 10
   const res = await fetch(`${BASE}/users/${username}/repos?per_page=100&sort=updated`, {
     signal,
   })
@@ -32,7 +31,7 @@ export async function getUserRepos(
   }
 
   const repos: Repo[] = await res.json()
-  return repos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 10)
+  return repos.slice(0, 10)
 }
 
 export async function getRepoDetail(
