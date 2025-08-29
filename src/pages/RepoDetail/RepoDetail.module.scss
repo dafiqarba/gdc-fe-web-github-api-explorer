@@ -1,0 +1,15 @@
+.errorBox {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  color: var(--error);
+}
+.dim {
+  margin-top: 6px;
+  color: var(--text-dim);
+}
+
+.buttonCenter {
+  margin: 0 auto;
+}
